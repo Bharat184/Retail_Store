@@ -1,0 +1,10 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+body{
+    background: blanchedalmond url(../images/table_bakcground.jpg) no-repeat center fixed;
+}
+.container{
+    min-height: 100vh;
+}

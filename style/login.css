@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+    margin:0px;
+    padding: 0px;
+}
+body{
+    position: relative;
+    z-index:1;
+    background: url('../images/login.jpg') no-repeat center center/cover;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+.input{
+    display: block;
+    width:50vw;
+    height: 33px;
+    padding:5px;
+    margin:20px 5px;
+    font-size: 15px;
+    border-radius: 8px;
+}
+.btn
+{
+    display: block;
+    width:20vw;
+    margin:4px auto;
+    height: 30px;
+    padding:0px 4px;
+    font-size: 16px;
+    cursor:pointer;
+}
+.btn:hover{
+    background: rgb(43, 39, 39);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    
+}
+.box{
+    background: rgb(207, 119, 104);
+    height: 50vh;
+    border-radius: 10px;
+    padding:15px 10px;
+}
+.t-center{
+    text-align: center;
+}
+a{
+    color:rgb(5, 5, 5);
+}
+h3{
+    color:rgb(3, 3, 3);
+}
+@media screen and (max-width:500px)
+{
+    .box{
+        width:80vw;
+    }
+    .input{
+        display: block;
+    width:60vw;
+    height: 33px;
+    padding:5px;
+    margin:20px auto;
+    font-size: 15px;
+    border-radius: 8px;
+    }
+    a,#checkbox{
+        margin-left: 38px;
+    }
+    .btn
+{
+    display: block;
+    width:20vw;
+    margin:14px auto;
+    height: 30px;
+    padding:0px 4px;
+    font-size: 16px;
+    cursor:pointer;
+}
+}

@@ -1,0 +1,46 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: rgb(219, 103, 103);
+}
+.container{
+    width:80vw;
+    margin:0px auto;
+    background-color: rgb(217, 194, 238);
+    min-height: 100vh;
+    padding:14px 0px;
+}
+.input{
+    display: block;
+    width:60vw;
+    margin:10px auto;
+    height: 30px;
+    padding:10px 5px;
+    font-size: 17px;
+}
+.inputarea{
+    display: block;
+    width:60vw;
+    margin:10px auto;
+    padding:5px;
+    font-size: 17px;
+}
+label{
+    display: block;
+    width:60vw;
+    margin:auto;
+}
+h3,h2{
+    width:60vw;
+    margin:5px auto;
+}
+.btn{
+    display: block;
+    width: 30vw;
+    margin: 12px auto;
+    height: 30px;
+    font-size: 16px;
+}

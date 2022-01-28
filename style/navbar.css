@@ -1,0 +1,100 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+#logo{
+    color:white;
+    font-size: 28px;
+    font-weight: 700;
+    margin-left: 10px;
+}
+nav{
+    display: flex;
+    background: #1f1f1f;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+}
+.navright{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ul{
+    display: flex;
+}
+nav ul li {
+    list-style: none;
+}
+nav ul li a{
+    color:white;
+    text-decoration: none;
+    padding:5px 15px;
+}
+nav ul li a:hover{
+    background: white;
+    color:black;
+    border-radius: 15px;
+}
+#user{
+    margin: 0px 10px;
+    color:white;
+}
+button{
+    display: block;
+    margin:5px auto;
+}
+nav .menubutton i{
+    color:white;
+    font-size: 28px;
+
+}
+#check{
+    display: none;
+}
+.menubutton{
+    display: none;
+}
+button{
+    cursor:pointer;
+    height: 25px;
+    width:75px;
+}
+@media only screen and (max-width:800px)
+{
+   #check{
+       display: none;
+   }
+   .menubutton{
+       display: block;
+   }
+   ul{
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+   }
+   ul li{
+       margin:12px 0px;
+   }
+   .navright{
+       flex-direction: column;
+       width: 100vw;
+      position: fixed;
+      top:80px;
+      left:-100%;
+      background: black;
+      transition: all 0.4s ease-in;
+   }
+   .menubutton{
+       margin-right: 10px;
+   }
+   #check:checked ~ .navright{
+       left:0%;
+   }
+   #check:checked ~ .menubutton i::before{
+       content:"\f00d";
+   }
+   #user{
+       margin: 12px 0px;
+   }
+}

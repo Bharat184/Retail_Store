@@ -1,0 +1,46 @@
+@media print{
+    body{
+        visibility: hidden;
+    }
+    .container{
+        visibility: visible;
+        position: absolute;
+        top:8px;
+        left:20px;
+    }
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.container{
+    width:80%;
+    margin:auto;
+}
+h1{
+    text-align: center;
+    margin:14px 0px;
+}
+h2{
+    margin:20px 0px;
+}
+h3{
+    display: inline-block;
+    margin-top: 16px;
+}
+table{
+    width:60%;
+    margin: auto;
+    border-collapse: collapse;
+    background-color: cadetblue;
+    
+}
+th,td{
+    padding: 8px;
+    text-align: left;
+    border-bottom: 10px;
+}
+tr:nth-child(even)
+{
+    background-color: #f2f2f2;
+}
