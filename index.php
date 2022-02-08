@@ -1,8 +1,3 @@
-<?php
-//  include './pages/includeFiles/navbar.html';
-//  include './pages/includeFiles/footer.html';
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <!-- <a href="pages/sellerRegis.php">Proceed Ahead</a> -->
+    
     <?php
     session_start();
       if(isset($_SESSION['id']))

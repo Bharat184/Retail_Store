@@ -9,10 +9,12 @@ body{
     width:80vw;
     margin:10px auto;
     min-height: 100vh;
+    background-color: rgb(224, 205, 205,0.8);
 }
 table{
     width:100%;
     border-collapse: collapse;
+    background-color: rgb(224, 205, 205,0.9);
 }
 th,td{
     padding: 8px;
@@ -36,19 +38,27 @@ label{
 .input{
     display: block;
     width:100%;
-    height: 4vh;
+    height: 30px;
     margin:10px 0px;
+    font-size: 18px;
+    padding:2px 5px;
 }
 .txtarea{
     display: block;
     width:100%;
     margin: 10px 0px;
+    font-size: 18px;
+    padding:2px 5px;
 }
 .btn{
     display: block;
     width:50%;
-    height: 4vh;
-    font-size: 17px;
+    height: 30px;
+    font-size: 18px;
     margin:20px auto;
-
+    border-radius: 5px;
+    outline: none;
+}
+.t-center{
+    text-align: center;
 }

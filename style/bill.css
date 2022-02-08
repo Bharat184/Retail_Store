@@ -8,6 +8,10 @@
         top:8px;
         left:20px;
     }
+    .btn{
+        /* visibility: hidden; */
+        display: none;
+    }
 }
 *{
     margin: 0px;
@@ -16,10 +20,13 @@
 .container{
     width:80%;
     margin:auto;
+    background-color: rgb(224, 205, 205,0.8);
+    padding:10px;
 }
 h1{
     text-align: center;
     margin:14px 0px;
+    border-bottom: 3px solid black;
 }
 h2{
     margin:20px 0px;
@@ -33,6 +40,7 @@ table{
     margin: auto;
     border-collapse: collapse;
     background-color: cadetblue;
+    padding: 10px;
     
 }
 th,td{
@@ -42,5 +50,12 @@ th,td{
 }
 tr:nth-child(even)
 {
-    background-color: #f2f2f2;
+    background-color: cadetblue;
+}
+.btn{
+    width: 123px;
+    padding: 4px;
+    border-radius: 10px;
+    height: 35px;
+    font-size: 20px;
 }

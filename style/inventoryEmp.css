@@ -15,11 +15,13 @@ body{
 table{
     width:100%;
     border-collapse: collapse;
+    background-color: rgb(224, 205, 205,0.9);
 }
 th,td{
     padding: 8px;
     text-align: left;
     border-bottom: 1px solid #ddd;
+    color:black;
 }
 tr:nth-child(even){
     background-color: #f2f2f2;

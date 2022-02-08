@@ -9,6 +9,9 @@
     margin-left: 10px;
 }
 nav{
+    position: sticky;
+    z-index: 1;
+    top:0px;
     display: flex;
     background: #1f1f1f;
     height: 80px;

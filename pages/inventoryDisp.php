@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/inventoryDisp.css">
+    <link rel="stylesheet" href="../style/general.css">
 </head>
 <body>
     <?php
@@ -45,10 +46,12 @@
                       $id=$_SESSION['id'];
                       $sql="select * from inventory where addedBy ='$id'";
                       $query=mysqli_query($conn,$sql);
+                      $sno=0;
                       while($row=mysqli_fetch_assoc($query))
                       {
+                         $sno+=1;
                          echo "<tr>
-                         <td>$row[item_id]</td>
+                         <td>$sno</td>
                          <td>$row[upc_Code]</td>
                          <td>$row[itemname]</td>
                          <td>$row[quantity]</td>
@@ -57,7 +60,13 @@
                          <td>$row[expiryDate]</td>
                          <td>$row[unit]</td>
                          <td><a href='inventoryEdit.php?id=$row[item_id]'>Update</a></td>
-                         <td><a href='code/inventoryCode.php?id=$row[item_id]&&action=d'>Delete</a></td>
+                         <td>
+                         <form action='./code/inventoryCode.php' method='POST'>
+                            <input type='hidden' name='i_id' value='$row[item_id]'>
+                            <input type='submit' name='del_item' style='display:none;' class='delbtn' >
+                         </form>
+                         <a href='#' onclick='handleDelete($sno)'>Delete</a>
+                         </td>
                          </tr>";
                       }
 
@@ -71,5 +80,15 @@
     ?>
     
     <script src="../script/index.js"></script>
+    <script>
+        function handleDelete(id)
+        {
+            if(confirm("Do you want to delete?"))
+            { 
+                let index=id-1;
+                document.getElementsByClassName('delbtn')[index].click();
+            }
+        }
+    </script>
 </body>
 </html>

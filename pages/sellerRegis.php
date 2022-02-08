@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/sellerRegis.css">
-
+    <link rel="stylesheet" href="../style/general.css">
 </head>
 
 <body>
@@ -51,7 +51,7 @@
             <label for="pasword">Re-Enter your Password</label>
             <input type="password" name="pasword" id="pasword" class="input">
              <input type="submit" value="Submit" class="btn" name="submit">
-             <a href="login.php" class="btn">Continue with login</a>
+             <button class="btn"><a href="login.php" class="link">Continue with login</a></button>
         </form>
     </div>
     <script src="../script/index.js"></script>

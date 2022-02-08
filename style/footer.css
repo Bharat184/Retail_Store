@@ -5,11 +5,13 @@
 }
 .footer{
     background-color: lightblue;
-    height: 10vh;
+    height: 60px;
     display: flex;
     flex-direction: column;
     padding: 0px 10px;
     justify-content: center;
+    background-color: #1f1f1f;
+    color:white;
 }
 .fbox{
     padding:5px 0px;

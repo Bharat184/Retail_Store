@@ -10,12 +10,25 @@
     <div class="container">
         <div class="box">
             <h3 class="t-center">Retail Store Management</h3>
+            
             <?php
                if(isset($_GET['err']))
                {
                 if($_GET['err']=='u')
                 {
-                   echo "<h4 class='input' style='text-align:center; background:green; font-size:20px;'>Username Required<h4>";
+                   echo "<h4 class='input' style='text-align:center; background:green; font-size:20px;'>Username Required.<h4>";
+                }
+                if($_GET['err']=='p')
+                {
+                   echo "<h4 class='input' style='text-align:center; background:green; font-size:20px;'>Password Required.<h4>";
+                }
+                if($_GET['err']=='invalid')
+                {
+                   echo "<h4 class='input' style='text-align:center; background:green; font-size:20px;'>Invalid Credentials.<h4>";
+                }
+                if($_GET['err']=='account')
+                {
+                   echo "<h4 class='input' style='text-align:center; background:green; font-size:20px;'>Account don't exists.<h4>";
                 }
                }
             ?>
@@ -29,9 +42,16 @@
             </form>
         </div>
     </div>
-    <?php
-     include "./includeFiles/footer.html";
-    ?>
+    <script>
+        setTimeout(() => {
+            console.log("hello");
+            let msg=document.querySelector('h4');
+            if(msg)
+            {
+                msg.style.display='none';
+            }
+        }, 3000);
+    </script>
 </body>
 </html>
 

@@ -22,9 +22,9 @@ include("connection.php");
     {
         if($password==$cpassword)
          {
-            $sql="INSERT INTO `seller`(`name`, `email`, `phoneno`, `address`, `shopname`, `shopaddress`, `password`) VALUES ('$name','$email','$phoneno','$address','$shopname','$shopaddress','$password')";
-
-            $sql1="INSERT INTO `login`(`username`, `password`, `email`, `designation`) VALUES ('$name','$password','$email',2)";
+            $hash=password_hash($password,PASSWORD_DEFAULT);
+            $sql="INSERT INTO `seller`(`name`, `email`, `phoneno`, `address`, `shopname`, `shopaddress`, `password`) VALUES ('$name','$email','$phoneno','$address','$shopname','$shopaddress','$hash')";
+            $sql1="INSERT INTO `login`(`username`, `password`, `email`, `designation`) VALUES ('$name','$hash','$email',2)";
             $query2=mysqli_query($conn,$sql1);
             
             $query=mysqli_query($conn,$sql);

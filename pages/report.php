@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/report.css">
+    <link rel="stylesheet" href="../style/general.css">
     <title>Retail Store</title>
 </head>
 
@@ -58,7 +58,7 @@
                                 {
                                     while($row=mysqli_fetch_assoc($query))
                                     {
-                                        echo "<tr><td>$row[order_id]</td><td>$row[name]</td><td>$row[email]</td><td>$row[phoneno]</td><td>$row[address]</td><td class='amount'>$row[tAmount]</td><td>$row[Date]</td></tr>";
+                                        echo "<tr><td>$row[order_id]</td><td>$row[name]</td><td>$row[email]</td><td>$row[phoneno]</td><td>$row[address]</td><td class='amount'>$row[tAmount]</td><td>$row[Date]</td><td><a href='orderDetail.php?id=$row[order_id]'>View Order Details</a></td></tr>";
                                     }
                                 }
                             }
@@ -75,7 +75,7 @@
                                 {
                                     while($row=mysqli_fetch_assoc($query))
                                     {
-                                        echo "<tr><td>$row[order_id]</td><td>$row[name]</td><td>$row[email]</td><td>$row[phoneno]</td><td>$row[address]</td><td>$row[tAmount]</td><td>$row[Date]</td></tr>";
+                                        echo "<tr><td>$row[order_id]</td><td>$row[name]</td><td>$row[email]</td><td>$row[phoneno]</td><td>$row[address]</td><td class='amount'>$row[tAmount]</td><td>$row[Date]</td><td><a href='orderDetail.php?id=$row[order_id]'>View Order Details</a></td></tr>";
                                     }
                                 }
                             }
@@ -93,6 +93,7 @@
 </body>
 <script>
     let amount=document.getElementsByClassName('amount');
+    console.log(amount)
     let total=0;
     for(let i=0;i<amount.length;i++)
     {

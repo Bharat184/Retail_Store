@@ -22,7 +22,7 @@
         if(mysqli_num_rows($query)>0)
         {
           $row=mysqli_fetch_assoc($query);
-          if($row['password']==$password)
+          if(password_verify($password,$row['password']))
           {
             if(isset($_POST["rememberme"]))
             {
@@ -61,12 +61,12 @@
           }
          else
          {
-           echo "Password don't Match";
+          header("Location: ../login.php?err=invalid"); //Password Don't match
          }
       }
       else
       {
-        echo "Username does not exist";
+        header("Location: ../login.php?err=account"); //Username doesn't exists
       }
     }
   }

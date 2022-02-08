@@ -13,5 +13,8 @@ for(let i=0;i<iprice.length;i++)
 }
 let total=document.getElementById("total");
 let totall=document.getElementById("totall");
-total.innerText=sum;
-totall.value=sum;
+if(total && totall)
+{
+    total.innerText=sum;
+    totall.value=sum;
+}

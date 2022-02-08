@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/myCart.css">
+    <link rel="stylesheet" href="../style/general.css">
 </head>
 
 <body>
@@ -39,7 +40,7 @@
     ?>
 
     <div class="container">
-        <h1 style="text-align: center;">My Cart <?php if(isset($_SESSION['cart'])){echo $count;}?></h1>
+        <h1 style="text-align: center;">My Cart(<?php if(isset($_SESSION['cart'])){echo $count;}?>)</h1>
         <div class="table" style="overflow-x: auto;">
             <table>
                 <thead>
@@ -77,13 +78,15 @@
 
                 </tbody>
             </table>
-            <p>Total: </p> <span id="total"></span>
+            <div style="margin:10px 5px; font-size:20px;">
+              <p style="display:inline-block;">Total:  </p> <span id="total"></span>
+            </div>
         </div>
-        <h2>Customer Details</h2>
+        <h2 class='t-center'>Customer Details</h2>
         <?php
            if(isset($_SESSION['cart']))
            {
-             echo '<form action="code/myCartCode.php" method="post">
+             echo '<div style="padding:2px 40px;"><form action="code/myCartCode.php" method="post">
              <label for="name">Name</label>
              <input type="text" name="name" id="name" class="input">
              <label for="email">Email</label>
@@ -95,7 +98,7 @@
              <input type="hidden" name="tamount" id="totall">
              <button type="submit" class="btn" name="buy">Submit</button>
     
-            </form>';
+            </form></div>';
            }
            else
            {

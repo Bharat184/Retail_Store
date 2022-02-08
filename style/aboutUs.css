@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&family=Playfair+Display&display=swap');
 *{
     margin:0px;
     padding: 0px;
@@ -7,4 +8,26 @@ body{
 }
 .container{
     min-height: 100vh;
+    padding:10px;
+    width:80vw;
+    margin:auto;
+    font-family: 'Lora', serif;
+    color:black;
+}
+.container h1{
+    margin:5px 0px;
+    text-align: center;
+}
+#head{
+    padding: 10px;
+    background-color: rgb(240, 245, 245);
+    border-radius: 10px;
+    text-align: justify;
+    line-height: 25px;
+    margin-bottom: 30px;
+}
+#head h2{
+    margin:5px 0px;
+    text-align: center;
+    border-bottom: 3px solid black;
 }

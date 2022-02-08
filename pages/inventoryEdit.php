@@ -6,18 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/inventoryEdit.css">
+    <link rel="stylesheet" href="../style/general.css">
 </head>
 <body>
     <?php
       session_start();
-      include './code/navbar.php';
+      include './includeFiles/navbar.php';
       include './code/loginCheckCode.php';
     ?>
     
     <div class="container">
-        <h2 style="text-align: center; margin-bottom: 8px;">Add an item</h2>
+        <h2 style="text-align: center; margin-bottom: 8px;">Update Item</h2>
         <?php
-          session_start();
           include 'code/connection.php';
           $id=$_GET['id'];
           $sql="select * from inventory where item_id='$id'";
@@ -57,10 +57,14 @@
                 <option value="per-kg">per-kg</option>
             </select>
             <input type="hidden" name="id" value="<?php echo $itemid;?>">
-            <input type="submit" value="Add an item" class="btn" name="update">
+            <input type="submit" value="Update Item" class="btn" name="update">
         </form>
 
     </div>
+   <?php
+    include './includeFiles/footer.html';
+   ?>
+   
 </body>
 
 </html>

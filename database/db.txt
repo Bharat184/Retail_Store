@@ -1,0 +1,74 @@
+create table login(
+id int(25) not null auto_increment,
+username varchar(20) unique not null,
+password varchar(20) not null,
+email varchar(20) not null,
+designation int not null,
+primary key(id)
+);
+create table seller(
+seller_id int(25) not null auto_increment,
+name varchar(25) not null,
+email varchar(25) not null,
+phoneno varchar(14) not null,
+address varchar(200) not null,
+shopname varchar(50) not null,
+shopaddress varchar(200) not null,
+password varchar(20) not null,
+date datetime not null,
+primary key(seller_id)
+);
+
+create table employee(
+emp_id int(25) not null auto_increment,
+name varchar(25) not null,
+email varchar(25) not null,
+phoneno varchar(14) not null,
+address varchar(100) not null,
+password varchar(25) not null,
+addedBy int(25) not null,
+dateOfJoin datetime not null,
+primary key(emp_id),
+foreign key(addedBy) references seller(seller_id)
+);
+
+
+create table inventory(
+item_id int(25) not null auto_increment,
+itemname varchar(25) not null,
+quantity int(10) not null,
+price int(10) not null,
+purchaseDate date not null,
+expiryDate date not null,
+unit varchar(10) not null,
+upc_Code varchar(15) not null,
+dateOfAddition datetime not null,
+addedBy int(25) not null,
+foreign key(addedBy) references seller(seller_id),
+primary key(item_id)
+);
+
+create table orderManager(
+order_id int(25) not null auto_increment,
+name varchar(25) not null,
+email varchar(25) not null,
+phoneno varchar(25) not null,
+address varchar(100) not null,
+tAmount int(10) not null,
+soldBy int(25) not null,
+empInCharge int(25) not null,
+primary key(order_id),
+foreign key(soldBy) references seller(seller_id),
+foreign key(empInCharge) references employee(emp_id)
+);
+
+create table orderDetails(
+Order_id int(25) not null,
+item_id int(25) not null,
+price int(10) not null,
+quantity int(10) not null,
+foreign key(Order_id) references  ordermanager(order_id),
+foreign key(item_id) references inventory(item_id)
+);
+
+ALTER TABLE `seller` CHANGE `date` `date` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP;

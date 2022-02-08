@@ -21,9 +21,10 @@
       {
             if($password==$cpassword)
             {
-            $sql="INSERT INTO `employee`(`name`, `email`, `phoneno`, `address`, `password`, `addedBy`) VALUES ('$name','$email','$phoneno','$address','$password','$id')";
+            $hash=password_hash($password,PASSWORD_DEFAULT);
+            $sql="INSERT INTO `employee`(`name`, `email`, `phoneno`, `address`, `password`, `addedBy`) VALUES ('$name','$email','$phoneno','$address','$hash','$id')";
             $query=mysqli_query($conn,$sql);
-            $sql1="INSERT INTO `login`(`username`, `password`, `email`, `designation`) VALUES ('$name','$password','$email',3)";
+            $sql1="INSERT INTO `login`(`username`, `password`, `email`, `designation`) VALUES ('$name','$hash','$email',3)";
             $query1=mysqli_query($conn,$sql1);
             if($query)
             {

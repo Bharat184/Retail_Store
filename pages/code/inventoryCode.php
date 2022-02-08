@@ -20,19 +20,21 @@ include "connection.php";
         }
 
     }
-    if(isset($_GET['id']))
+    if(isset($_POST['del_item']))
     {
-        $id=$_GET['id'];
-        $status=$_GET['action'];
-        if($status=='d')
+
+        $id=$_POST["i_id"];
+        $delete="delete from inventory where item_id='$id'";
+        $del=mysqli_query($conn,$delete);
+        if($del)
         {
-          $delete="delete from inventory where item_id='$id'";
-          $del=mysqli_query($conn,$delete);
-          if($del)
-          {
-              header("Location: ../inventoryDisp.php?delete=true");
-          }
+            header("Location: ../inventoryDisp.php?delete=true");
         }
+        else
+        {
+            echo "not deleted";
+        }
+        
     }
     if(isset($_POST['update']))
     {

@@ -9,7 +9,7 @@ body{
     width:80vw;
     margin:0px auto;
     background-color: rgb(217, 194, 238);
-    min-height: 100vh;
+    min-height: 105vh;
 }
 .input{
     display: block;
@@ -33,7 +33,7 @@ label{
 }
 h3,h2{
     width:60vw;
-    margin:5px auto;
+    margin:0px auto;
 }
 .btn{
     display: block;

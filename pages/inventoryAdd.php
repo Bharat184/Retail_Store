@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/inventoryAdd.css">
-
+    <link rel="stylesheet" href="../style/general.css">
 </head>
 
 <body>
@@ -49,6 +49,10 @@
             <input type="submit" value="Add an item" class="btn" name="add">
         </form>
     </div>
+   <?php
+     include './includeFiles/footer.html';
+   ?>
+   
     <script src="../script/index.js"></script>
 
 </html>
